@@ -1,0 +1,44 @@
+:root {
+	--color-dark: #3a3845;
+	--color-beige-peach: #f7ccac;
+	--color-light-brown: #c69b7b;
+	--color-dark-brown: #826f66;
+	--color-neutral-800: #3a3845;
+	--color-neutral-700: #595667;
+	--color-neutral-600: #807f86;
+	--color-neutral-500: #a6a6a8;
+	--color-neutral-400: #cac9cf;
+	--color-neutral-300: #e5e5e5;
+	--color-neutral-200: #f7f6f5;
+	--color-light: #ffffff;
+	--color-stroke-1: #edeff5;
+	--color-stroke-2: #cac9cf;
+
+	--border: 1px solid var(--color-dark);
+	--border-radius-small: 4px;
+
+	--font-family-base: 'Gilroy', sans-serif;
+
+	--container-width: 1200px;
+	--container-padding-x: 20px;
+
+	// Расстояние между секциями макет (их 2 шт.)
+	--section-padding-y: 130px;
+
+	// Высота полей ввода
+	--input-height: 44px; // готово
+
+	// Высота кнопок
+	--button-height: 48px;
+	
+	// Плавность смены состояний кнопок ссылок, полей и т.п.
+	--transition-duration: 0.2s;
+
+	@include desktop {
+		--section-padding-y: 80px;
+	}
+
+	@include mobile {
+		--section-padding-y: 40px;
+	}
+}

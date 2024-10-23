@@ -1,0 +1,13 @@
+// Собираем все файлы стилей в один
+@import
+	'normalize',
+	'fonts',
+	'mixins',
+	'media',
+	'variables',
+	'utils',
+	'globals';
+
+@import
+	'blocks/header',
+	'blocks/content';

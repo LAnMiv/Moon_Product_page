@@ -1,0 +1,75 @@
+$desktop-above: 1281px;
+$desktop: 1280.98px;
+
+$tablet-above: 1024px;
+$tablet: 1023.98px;
+
+$mobile-above: 768px;
+$mobile: 767.98px;
+
+$mobile-s-above: 481px;
+$mobile-s: 480.98px;
+
+@mixin desktop-above {
+	@media (min-width: $desktop-above) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: $desktop) {
+		@content;
+	}
+}
+
+@mixin tablet-above {
+	@media (min-width: $tablet-above) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin mobile-above {
+	@media (min-width: $mobile-above) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: $mobile) {
+		@content;
+	}
+}
+
+@mixin mobile-s-above {
+	@media (min-width: $mobile-s-above) {
+		@content;
+	}
+}
+
+@mixin mobile-s {
+	@media (max-width: $mobile-s) {
+		@content;
+	}
+}
+
+// Поведение hover на десктоп и мобайл устройствах. Исключаем при нажатии на кнопку эффект залипания цвета на мобильных устройствах
+@mixin hover {
+	// Эти свойства будут работать только на устройствах где hover включен
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+	// Эти свойства будут работать только на устройствах где hover выключен
+	@media (hover: none) {
+		&:active {
+			@content;
+		}
+	}
+}
