@@ -35,6 +35,13 @@
 	align-items: center;
 }
 
+// Flex-элементы по краям с одинаковы расстоянием между ними
+@mixin flex-space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 // Позиционирование по центру
 @mixin abs-center {
 	position: absolute;

@@ -1,0 +1,45 @@
+.header {
+	--columnGapItem: 60px;
+
+	@include desktop {
+		--columnGapItem: 35px;
+	}
+
+	font-size: 16px;
+	font-weight: 500;
+	padding-block: 24px;
+
+	.logo {
+		&__image {
+			min-width: 185px;
+			height: auto;
+		}
+	}
+
+	&__inner {
+		@include flex-space-between;
+
+		column-gap: 20px;
+	}
+
+	&__menu {
+		&-left,
+		&-right {
+			@include flex-space-between
+		};
+
+		&-left {
+			// min-width: 635px;
+			column-gap: calc(var(--columnGapItem) * 2);
+
+			@include desktop {
+				column-gap: calc(var(--columnGapItem) * 1.2);;
+			}
+		}
+
+		&-right {
+			// min-width: 485px;
+			column-gap: var(--columnGapItem);
+		}
+	}
+}

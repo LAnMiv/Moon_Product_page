@@ -1,0 +1,17 @@
+.header-button {
+	&__list{
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+	}
+
+	&__item {
+		@include hover {
+			color: var(--color-light-brown);
+		}
+	}
+
+	&__link {
+		@include flex-center;
+	}
+}
