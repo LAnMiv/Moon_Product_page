@@ -1,0 +1,8 @@
+.rating-level {
+	&__list {
+		@include flex-center;
+
+		column-gap: 4px;
+		color: var(--color-light-brown);
+	}
+}

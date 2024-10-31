@@ -1,0 +1,299 @@
+.product-card {
+	&__menu {
+		padding-block: 24px;
+
+		@include mobile {
+			@include visually-hidden;
+		}
+	}
+
+	&__list {
+		display: inline-flex;
+		justify-content: start;
+		align-items: center;
+	}
+
+	&__item {
+		font-weight: 500;
+		color: var(--color-neutral-600);
+
+	
+		&:not(:last-child):after {
+			content: '/';
+			padding-inline: 8px;
+			color: var(--color-neutral-600);
+		}
+
+		&:last-child {
+			color: var(--color-dark);
+		}
+
+		&:not(:last-child) {
+			@include hover {
+				color: var(--color-light-brown);
+			}
+		}
+	}
+
+	&__card {
+		display: flex;
+		column-gap: 20px;
+
+		@include tablet {
+			flex-direction: column;
+			row-gap: 40px;
+		}
+	}
+
+	&__images {
+		flex: 0 0 57.666%;
+
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+
+		@include desktop {
+			flex: 0 0 50%;
+		}
+
+		@include tablet {
+			justify-content: space-between;
+			flex-direction: row;
+			column-gap: 40px;
+		}
+
+		@include mobile {
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			row-gap: 16px;
+		}
+	}
+
+	&__image-main {
+		@include flex-center;
+	}
+
+	&__image-big {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		@include tablet {
+			padding-left: 10%;
+		}
+
+		@include mobile {
+			padding-left: 0;
+		}
+	}
+
+	&__image-list {
+		display: flex;
+		column-gap: 9px;
+
+		@include tablet {
+			flex-direction: column;
+			row-gap: 9px;
+		}
+
+		@include mobile {
+			flex-direction: row;
+			column-gap: 8px;
+		}
+	}
+
+	&__image-small {
+		width: 132px;
+		height: auto;
+	}
+
+	&__body {
+		flex: 1 1 100%;
+		display: flex;
+		flex-direction: column;
+		row-gap: 40px;
+
+		@include tablet {
+			flex-direction: row;
+			column-gap: 40px;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			row-gap: 24px;
+		}
+		
+	}
+
+	&__product {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+
+		@include mobile {
+			row-gap: 16px;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+	}
+	
+	&__rating {
+		display: flex;
+	}
+
+	&__rating-level {
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+
+		@include mobile {
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
+		}
+	}
+
+	&__reviews-counter {
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+
+		@include mobile {
+			&:not(:last-child) {
+				margin-right: 22px;
+			}
+		}
+	}
+
+	&__reviews-counter,
+	&__availability {
+		@include fluid-text(16, 14);
+
+		font-weight: 500;
+
+		span {
+			color: var(--color-neutral-600);
+		}
+	}
+
+	&__price {
+		display: flex;
+		column-gap: 16px;
+		font-weight: 600;
+
+		@include fluid-text(24, 20);
+	}
+
+	&__price-basic {
+		color: var(--color-neutral-600);
+	}
+
+	&__colors {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+		
+		@include mobile {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__colors-title {
+		font-weight: 500;
+
+		@include fluid-text(16, 14);
+	}
+
+	&__colors-list {
+		display: flex;
+		column-gap: 8px;
+	}
+
+	&__colors-item {
+		--buttonBorderRadius: var(--border-radius-small);
+
+		border-radius: var(--buttonBorderRadius);
+
+		&:nth-child(1) {
+			background-color: var(--color-light);
+		}
+
+		&:nth-child(2) {
+			background-color: var(--color-light-brown);
+		}
+
+		&:nth-child(3) {
+			background-color: #ccd8ce;
+		}
+
+		&:nth-child(4) {
+			background-color: #b4555d;
+		}
+		
+		&:nth-child(5) {
+			background-color: #9b92a1;
+		}
+	}
+
+	&__colors-button {
+		@include flex-center;
+		@include reset-button;
+		@include square(40px);
+		
+		border-radius: var(--buttonBorderRadius);
+		cursor: pointer;
+
+		@include hover {
+			border: var(--border-dark);
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		column-gap: 20px;
+
+		@include mobile {
+			column-gap: 16px;
+		}
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		column-gap: 24px;
+	}
+
+	&__social-text {
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	&__social-list {
+		display: flex;
+		column-gap: 8px;
+		
+	}
+
+	&__social-item {
+		@include flex-center;
+		
+		color: var(--color-neutral-600);
+	}
+
+	&__social-icon {
+		@include flex-center;
+		@include square(32px);
+
+		@include hover {
+			color: var(--color-light-brown);
+		}
+
+		svg {
+			width: 18px;
+			height: 16px;
+		}
+	}
+}

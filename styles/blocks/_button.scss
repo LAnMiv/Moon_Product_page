@@ -1,0 +1,28 @@
+.button {
+	@include flex-center (true);
+
+	column-gap: 8px;
+	width: 100%;
+	max-width: 386px;
+	height: var(--button-height);
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--color-light);
+	background-color: var(--color-dark);
+	border: var(--border-dark);
+	border-radius: var(--border-radius-small);
+	cursor: pointer;
+
+	&__icon {
+		@include flex-center;
+	}
+
+	@include hover {
+		color: var(--color-light-brown);
+		border-color: var(--color-light-brown);
+	}
+
+	&--border-light {
+		border-color: var(--color-light);
+	}
+}
