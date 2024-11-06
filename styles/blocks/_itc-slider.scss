@@ -1,0 +1,76 @@
+.itc-slider {
+	@include mobile {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+
+		@include mobile {
+			display: contents;
+
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	&__header-title {
+		font-weight: 600;
+		text-transform: uppercase;
+
+		@include mobile {
+			order: 10;
+		}
+	}
+
+	&__buttons-arrow {
+		display: flex;
+		column-gap: 16px;
+
+		@include mobile {
+			order: 30;
+			align-self: flex-end;
+		}
+	}
+
+	&__slider-wrapper {
+		background-color: var(--color-neutral-200);
+
+		@include mobile {
+			order: 20;
+		}
+	}
+
+
+	&__slider-items {
+		--gap: 16px;
+	
+		display: flex;
+		gap: var(--gap);
+	}
+
+	&__slider-item {
+		flex: 0 0 calc(25% - var(--gap) * 3 / 4);
+		max-width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+
+		background-color: var(--color-light);
+
+		@include tablet {
+			flex: 0 0 calc(33.3333333333% - var(--gap) * 2 / 3);
+		}
+
+		@include mobile {
+			flex: 0 0 calc(50% - var(--gap) / 2);
+		}
+	}
+}

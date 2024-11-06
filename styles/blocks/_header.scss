@@ -5,6 +5,10 @@
 		--columnGapItem: 35px;
 	}
 
+	@include tablet {
+		--columnGapItem: 25px;
+	}
+
 	font-size: 16px;
 	font-weight: 500;
 	padding-block: 24px;
@@ -29,7 +33,6 @@
 		};
 
 		&-left {
-			// min-width: 635px;
 			column-gap: calc(var(--columnGapItem) * 2);
 
 			@include desktop {
@@ -38,7 +41,6 @@
 		}
 
 		&-right {
-			// min-width: 485px;
 			column-gap: var(--columnGapItem);
 		}
 	}

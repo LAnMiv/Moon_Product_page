@@ -17,10 +17,6 @@
 		flex-direction: column;
 		column-gap: 16px;
 		list-style: none;
-
-		// @include mobile {
-		// 	row-gap: 20px;
-		// }
 	}
 
 	&__accordion {
@@ -67,10 +63,6 @@
 			align-items: center;
 			column-gap: 20px;
 			font-weight: 600;
-
-			// @include mobile {
-			// 	column-gap: 33px;
-			// }
 		}
 
 		&-indicator {
@@ -83,10 +75,6 @@
 			background-color: var(--color-gray);
 			border: var(--border);
 			border-radius: 50%;
-
-			// @include mobile {
-			// 	width: 30px;
-			// }
 
 			&::before,
 			&::after {

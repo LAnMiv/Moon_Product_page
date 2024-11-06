@@ -1,15 +1,61 @@
 .button-icon {
+	.itc-slider-btn-hide {
+		border: var(--border-icon-neutral);
+
+		svg {
+			color: var(--color-neutral-400);
+		}
+	}
+
 	@include flex-center;
 
 	@include square(48px);
 	padding: 10px;
 	color: var(--color-dark);
 	border: var(--border-dark);
+	
 	border-radius: var(--border-radius-small);
-	cursor: pointer;
 
 	@include hover {
 		color: var(--color-light-brown);
 		border-color: var(--color-light-brown);
+		cursor: pointer;
+	}
+
+	&:is(.itc-slider-btn-hide) {
+		color: var(--color-neutral-400);
+		border: var(--border-icon-neutral);
+
+		@include hover {
+		color: var(--color-neutral-400);
+		border-color: var(--color-neutral-400);
+		cursor: default;
+	}
+	}
+	
+	&--arrow-square {
+		width: 44px;
+		height: 44px;
+		
+
+		@include mobile-above {
+			svg {
+				width: 24px;
+			}
+		}
+
+		@include mobile {
+			width: 40px;
+			height: 40px;
+			padding: 8px 10px;
+		}
+	}
+
+	&--border-transparent {
+		@include reset-button;
+	}
+
+	.itc-slider-btn-hide {
+		
 	}
 }
