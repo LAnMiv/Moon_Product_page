@@ -1,13 +1,23 @@
 .section {
-	margin-bottom: 130px;
+	&:not(:last-child) {
+		margin-bottom: 130px;
+	}
 
 	@include desktop {
-		margin-bottom: 100px;
+		&:not(:last-child) {
+			margin-bottom: 100px;
+		}
 	}
+
 	@include tablet {
-		margin-bottom: 70px;
+		&:not(:last-child) {
+			margin-bottom: 70px;
+		}
 	}
+
 	@include mobile {
-		margin-bottom: 40px;
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
 	}
 }

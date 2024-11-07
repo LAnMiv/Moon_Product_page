@@ -1,4 +1,18 @@
 .itc-slider {
+	padding-bottom: 130px;
+
+	@include desktop {
+		padding-bottom: 100px;
+	}
+
+	@include tablet {
+		padding-bottom: 70px;
+	}
+
+	@include mobile {
+		padding-bottom: 40px;
+	}
+
 	@include mobile {
 		display: flex;
 		flex-direction: column;
