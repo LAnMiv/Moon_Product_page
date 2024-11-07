@@ -67,12 +67,18 @@
 			align-items: center;
 			flex-direction: column;
 			row-gap: 16px;
-			height: 100%;
+			
 		}
 	}
 
 	&__image-big {
 		object-fit: cover;
+
+		@include mobile {
+			width: 328px;
+			height: auto;
+		}
+
 	}
 
 	&__image-list {
