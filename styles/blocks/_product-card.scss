@@ -1,4 +1,27 @@
 .product-card {
+	&:not(:last-child) {
+		margin-bottom: 130px;
+	}
+
+	@include desktop {
+		&:not(:last-child) {
+			margin-bottom: 100px;
+		}
+	}
+
+	@include tablet {
+		&:not(:last-child) {
+			margin-bottom: 70px;
+		}
+	}
+
+	@include mobile {
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+
+
 	&__menu {
 		padding-block: 24px;
 

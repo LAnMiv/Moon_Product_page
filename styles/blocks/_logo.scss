@@ -1,0 +1,24 @@
+.logo {
+	min-width: 185px;
+	height: auto;
+
+	&--different-color {
+		color: var(--color-light-brown);
+
+		svg {
+			path:nth-child(n+10) {
+				fill: currentColor;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+
+		@include mobile {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+}

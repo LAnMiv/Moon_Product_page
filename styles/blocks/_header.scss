@@ -13,13 +13,6 @@
 	font-weight: 500;
 	padding-block: 24px;
 
-	.logo {
-		&__image {
-			min-width: 185px;
-			height: auto;
-		}
-	}
-
 	&__inner {
 		@include flex-space-between;
 

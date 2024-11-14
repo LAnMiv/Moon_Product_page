@@ -29,21 +29,6 @@
 		}
 	}
 
-	&__logo {
-		display: block;
-		min-width: 185px;
-
-		&:not(:last-child) {
-			margin-bottom: 40px;
-		}
-
-		@include mobile {
-			&:not(:last-child) {
-				margin-bottom: 16px;
-			}
-		}
-	}
-
 	&__description {
 		max-width: 303px;
 
